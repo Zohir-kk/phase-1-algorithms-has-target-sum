@@ -19,7 +19,7 @@ return false
   const takes and array
   for each number in the array
       const complement will take the target number and subtracts the number
-      
+
 */
 
 /*
@@ -41,6 +41,9 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", hasTargetSum([1, 2, 5], 4));
+
+  console.log("Expecting: false");
+  console.log("=>", hasTargetSum([-5,5,10,6], 7));
 }
 
 module.exports = hasTargetSum;
