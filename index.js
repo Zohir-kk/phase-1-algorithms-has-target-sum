@@ -1,13 +1,25 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const pairs= []
+for(let number of array){
+  const complement = target - number
+
+  if (pairs[complement]){
+    return true
+  }
+  pairs[number] = true
+}
+return false
 }
 
-/* 
-  Write the Big O time complexity of your function here
+/*
+ O(n)
 */
 
-/* 
-  Add your pseudocode here
+/*
+  const takes and array
+  for each number in the array
+      const complement will take the target number and subtracts the number
+      
 */
 
 /*
@@ -18,7 +30,7 @@ function hasTargetSum(array, target) {
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
-  console.log("=>", hasTargetSum([3, 8, 12, 4, 11, 7], 10));
+  console.log("=>", hasTargetSum([3, 8, 12, 4, 11, 7], 15));
 
   console.log("");
 
