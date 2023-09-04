@@ -1,5 +1,5 @@
 function hasTargetSum(array, target) {
-  const pairs= []
+  const pairs= {}
 for(let number of array){
   const complement = target - number
 
@@ -18,12 +18,21 @@ return false
 /*
   const takes and array
   for each number in the array
-      const complement will take the target number and subtracts the number
+      const pairs creates an object to track the numbers
+      const complement calculates the complement needed to reach the target
+      if the pair containes the complement
+        return true if it finds a pair that adds up to our target
+      then it adds it to the hash table
+        return false if no pair is found
+
+
 
 */
-
 /*
-  Add written explanation of your solution here
+ We started by creating an object"pair" to track our numbers which is called a hash table, then we itterate through the array and for each number
+ we calculate its complement to our target number (the number needed to reach the target number), then we check our object we
+ created earlier if we have our complement is there it returns true , once we finish itterating through the whole array if no
+ pair is found it'll return false 
 */
 
 // You can run `node index.js` to view these console logs
